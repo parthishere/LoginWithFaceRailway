@@ -10,6 +10,7 @@ data/
 dockerfile
 docker-compose.yml
 .dockerignore
+node_modules/
 
 # Backup files # 
 *.bak 
