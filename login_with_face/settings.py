@@ -113,29 +113,7 @@ TEMPLATES = [
 
 
 ASGI_APPLICATION = "login_with_face.asgi.application"
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.environ['DB_NAME'],
-#         "USER": os.environ['DB_USER'],
-#         "PASSWORD": os.environ['DB_PASSWORD'],
-#         "HOST": os.environ['DB_HOST'],  # set in docker-compose.yml
-#         "PORT": 5432,  # default postgres port
-#     }
-# }
-
-
-# DATABASES = {
-
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -221,9 +199,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 CELERY_BROKER_URL = os.environ["REDIS_URL"]
 CELERY_RESULT_BACKEND = os.environ["REDIS_URL"]
 
-# CELERY_BROKER_URL = 'redis://localhost:6379/0'
-# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
@@ -274,23 +249,6 @@ AUTHENTICATION_BACKENDS = (
 os.environ['DJANGO_SETTINGS_MODULE'] = 'login_with_face.settings'
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("redis", 6379)],
-#         },
-#     },
-# }
-
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("redis", 6379)],
-#         },
-#     },
-# }
 
 CHANNEL_LAYERS = {
     "default": {
