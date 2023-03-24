@@ -9,6 +9,7 @@ data/
 
 dockerfile
 docker-compose.yml
+.dockerignore
 
 # Backup files # 
 *.bak 
