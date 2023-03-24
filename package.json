@@ -1,0 +1,19 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-sass static/scss/main.scss static/css/style.css",
+    "wcompile": "node-sass static/scss/main.scss static/css/style.css -w"
+  },
+  "author": "parth",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
